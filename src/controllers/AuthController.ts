@@ -57,7 +57,7 @@ export async function login(req: Request, res: Response) {
         //Envoyer le token dans un cookier sécurisé,
         //le cookie n'est pas accesible par le client et ne peut être enbvoyé qu'à son émetteur
         res.cookie('jwt', token, { httpOnly: true, sameSite: 'strict' });
-        res.status(200).json({ message: 'Login succesful!' })
+        res.status(200).json({ message: 'Login succesful! Félicitations' })
     } catch (err: any) {
         res.status(500).send({ message: err.message })
     }
